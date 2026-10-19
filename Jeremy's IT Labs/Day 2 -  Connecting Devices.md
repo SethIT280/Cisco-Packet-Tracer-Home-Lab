@@ -3,6 +3,9 @@
 ## Task
 Connect each device using the appropriate type of cable.
 
+<img src="../Jeremy's IT Labs/images/day2-img1.png" width="600" alt="Complete DHCP configuration wizard">
+
+
 ## What I Did
 - Connected routers, switches, and endpoints using the correct cable type
   - PC to switch: straight-through cable
