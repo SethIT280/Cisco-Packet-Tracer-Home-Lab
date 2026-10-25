@@ -3,6 +3,8 @@
 ## Task
 Configure basic device security using the Cisco IOS CLI.
 
+<img src="../Jeremy's IT Labs/images/day4-img1.png" width="600" alt="Complete DHCP configuration wizard">
+
 ## What I Did
 1. Entered global configuration mode and changed the hostname to `SW1`
 ```
@@ -10,22 +12,38 @@ Configure basic device security using the Cisco IOS CLI.
    Switch# configure terminal
    Switch(config)# hostname SW1
 ```
+<img src="../Jeremy's IT Labs/images/day4-img4.png" width="600" alt="Complete DHCP configuration wizard">
+
 2. Set an unencrypted (plaintext) password with the `enable password` command
 ```
    SW1(config)# enable password <password>
 ```
+<img src="../Jeremy's IT Labs/images/day4-img5.png" width="600" alt="Complete DHCP configuration wizard">
+<img src="../Jeremy's IT Labs/images/day4-img6.png" width="600" alt="Complete DHCP configuration wizard">
+<img src="../Jeremy's IT Labs/images/day4-img7.png" width="600" alt="Complete DHCP configuration wizard">
+
+
 3. Encrypted the plaintext passwords with `service password-encryption`
 ```
    SW1(config)# service password-encryption
 ```
+<img src="../Jeremy's IT Labs/images/day4-img8.png" width="600" alt="Complete DHCP configuration wizard">
+<img src="../Jeremy's IT Labs/images/day4-img9.png" width="600" alt="Complete DHCP configuration wizard">
+
 4. Set an MD5-hashed password with `enable secret`
 ```
    SW1(config)# enable secret <password>
 ```
+<img src="../Jeremy's IT Labs/images/day4-img10.png" width="600" alt="Complete DHCP configuration wizard">
+<img src="../Jeremy's IT Labs/images/day4-img11.png" width="600" alt="Complete DHCP configuration wizard">
+
+
 5. Saved the running configuration to the startup configuration
 ```
    SW1# write memory
 ```
+<img src="../Jeremy's IT Labs/images/day4-img12.png" width="600" alt="Complete DHCP configuration wizard">
+
 
 ## What I Learned
 
