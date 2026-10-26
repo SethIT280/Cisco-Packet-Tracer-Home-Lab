@@ -1,8 +1,72 @@
 # Day 5-6 - Ethernet LAN Switching
 
+# Day 6 - ARP, ICMP, and the Switch MAC Address Table
+
 ## Task
+- Analyze the messages sent over the network when a device is pinged
+- Analyze the MAC address table on a switch
+
+<img src="../Jeremy's IT Labs/images/day6-img1.png" width="600">
 
 ## What I Did
+
+### 1. Pinged PC3 from PC1
+
+<img src="../Jeremy's IT Labs/images/day6-img2.png" width="600">
+
+- PC1 doesn't know PC3's MAC address, so it sends an **ARP request** first
+- The switch **floods** the ARP request out every port except the one it came in on
+- Devices that don't own 192.168.1.3 (PC2, PC4) drop the frame
+- PC3 sends an **ARP reply** back to PC1
+- Once PC1 has PC3's MAC address, it sends the **ICMP echo request** (the ping)
+
+<img src="../Jeremy's IT Labs/images/day6-img3.png" width="600">
+<img src="../Jeremy's IT Labs/images/day6-img11.png" width="200">
+
+### 2. Analyzed the ARP request and reply frames
+
+**ARP request**
+
+<img src="../Jeremy's IT Labs/images/day6-img4.png" width="400">
+<img src="../Jeremy's IT Labs/images/day6-img5.png" width="400">
+
+- Sent to the **broadcast** MAC address `FFFF.FFFF.FFFF` because PC1 doesn't know who owns 192.168.1.3
+- Source MAC is PC1 (`00D0.D3AD.9CAB`)
+- Target MAC is `0000.0000.0000` because it's the unknown being asked for
+
+**ARP reply**
+
+<img src="../Jeremy's IT Labs/images/day6-img10.png" width="400">
+
+- Sent as a **unicast** straight back to PC1's MAC (`00D0.D3AD.9CAB`)
+- Source MAC is PC3 (`0004.9A6E.D870`), which answers PC1's question
+
+<img src="../Jeremy's IT Labs/images/day6-img7.png" width="400">
+
+### 3. Generated traffic to fill the switch MAC address tables
+- Sent pings between the PCs so the switches could learn each PC's MAC address
+
+### 4. Viewed the MAC address table on SW2
+- Connected to SW2 and ran:
+
+```
+SW2> enable
+SW2# show mac address-table
+```
+
+<img src="../Jeremy's IT Labs/images/day6-img8.png" width="400">
+
+
+### 5. Cleared the dynamic MAC address table on SW2
+
+```
+SW2# clear mac address-table dynamic
+SW2# show mac address-table
+```
+
+<img src="../Jeremy's IT Labs/images/day6-img9.png" width="400">
+
+- The table is empty after clearing, and the switch relearns addresses as new traffic arrives
 
 ## What I Learned
 
