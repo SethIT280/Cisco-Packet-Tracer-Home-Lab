@@ -1,8 +1,82 @@
-## Day 7-8 - IPv4 Addressing
+# Day 7-8 - IPv4 Addressing
 
-### Task
+## Task
+Configure R1's interfaces so that all devices can communicate with each other.
 
-### What I Did
+## Topology
+<img src="../Jeremy's IT Labs/images/day8-img1.png" width="600" >
+
+| Network | Router Interface | Router IP | PC | PC IP |
+|---|---|---|---|---|
+| 15.0.0.0/8 | G0/0 | 15.255.255.254 | PC1 | 15.0.0.1 |
+| 182.98.0.0/16 | G0/1 | 182.98.255.254 | PC2 | 182.98.0.1 |
+| 201.191.20.0/24 | G0/2 | 201.191.20.254 | PC3 | 201.191.20.1 |
+
+## What I Did
+
+### 1. Configured the IP addresses on PC1, PC2, and PC3
+<img src="../Jeremy's IT Labs/images/day8-img4.png" width="600" >
+
+<img src="../Jeremy's IT Labs/images/day8-img2.png" width="600" >
+
+<img src="../Jeremy's IT Labs/images/day8-img3.png" width="600" >
+
+### 2. Renamed the router with the `hostname` command
+```
+Router> enable
+Router# configure terminal
+Router(config)# hostname R1
+```
+<img src="../Jeremy's IT Labs/images/day8-img5.png" width="600" >
+
+### 3. Viewed R1's interfaces with `show ip interface brief`
+```
+R1(config)# do show ip interface brief
+```
+All interfaces were unassigned and administratively down.
+
+<img src="../Jeremy's IT Labs/images/day8-img6.png" width="600" >
+
+### 4. Configured each interface
+**G0/0**
+```
+R1(config)# interface g0/0
+R1(config-if)# ip address 15.255.255.254 255.0.0.0
+R1(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/day8-img7.png" width="600" >
+
+**G0/1**
+```
+R1(config)# interface g0/1
+R1(config-if)# ip address 182.98.255.254 255.255.0.0
+R1(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/day8-img8.png" width="600" >
+
+**G0/2**
+```
+R1(config)# interface g0/2
+R1(config-if)# ip address 201.191.20.254 255.255.255.0
+R1(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/day8-img9.png" width="600" >
+
+### 5. Verified the interfaces are up
+```
+R1(config-if)# do show ip interface brief
+```
+All three interfaces show `up/up` with the correct IP addresses.
+
+<img src="../Jeremy's IT Labs/images/day8-img10.png" width="600" >
+
+### 6. Pinged PC2 and PC3 from PC1 to test connectivity
+Both pings succeeded. The first packet timed out because of the initial ARP request.
+
+<img src="../Jeremy's IT Labs/images/day8-img11.png" width="600" >
+
+## Result
+PC1 can reach PC2 (182.98.0.1) and PC3 (201.191.20.1) through R1.
 
 ### What I Learned
 
