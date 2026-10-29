@@ -1,6 +1,6 @@
 # Cisco-Packet-Tracer-Home-Lab
 
-This is my Cisco Packet Tracer home lab. I use this repo to document what I'm learning from [Jeremy's IT Lab](https://www.youtube.com/@JeremysITLab) CCNA course, along with my own labs to gain hands-on experience with networking and troubleshooting networks.
+This is my Cisco Packet Tracer home lab. I use this repo to document what I'm learning from [Jeremy's IT Lab]([https://www.youtube.com/@JeremysITLab](https://www.youtube.com/watch?v=H8W9oMNSuwo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) CCNA course, along with my own labs to gain hands-on experience with networking and troubleshooting networks.
 
 ## Goals
 - Gain the knowledge needed to become CCNA certified
