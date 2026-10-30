@@ -3,11 +3,103 @@
 ## Topology
 <img src="../Jeremy's IT Labs/images/Day11(L1)-img1.png" width="600" >
 
-## Lab 1 
-### Task
+# Day 11 - Lab 1
+
+## Task
 Configure static routes on all routers so that PC1 and PC2 can communicate.
 
-### What I Did
+## What I Did
+
+### PC Configuration
+Set a static IP and default gateway on PC1 and PC2. PC1 uses 192.168.1.1/24 with a default gateway of 192.168.1.254.
+
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img2.png" width="600" >
+
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img3.png" width="600" >
+
+### R1
+Set the hostname, then configured the IP address and description on G0/0 and G0/1 and activated them.
+```
+Router(config)# hostname R1
+R1(config)# int g0/0
+R1(config-if)# ip address 192.168.12.1 255.255.255.0
+R1(config-if)# description ## to R2 ##
+R1(config-if)# no shutdown
+R1(config-if)# int g0/1
+R1(config-if)# ip address 192.168.1.254 255.255.255.0
+R1(config-if)# description ## to SW1 ##
+R1(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img4.png" width="600" >
+
+Viewed the routing table. It only has connected (C) and local (L) routes. These were added when the interfaces were configured.
+```
+R1(config)# do show ip route
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img8.png" width="600" >
+
+Configured a static route to 192.168.3.0/24 with a next hop of 192.168.12.2.
+```
+R1(config)# ip route 192.168.3.0 255.255.255.0 192.168.12.2
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img9.png" width="600" >
+
+### R2
+Set the hostname, then configured the IP address and description on G0/0 and G0/1 and activated them.
+```
+Router(config)# hostname R2
+R2(config)# int g0/0
+R2(config-if)# ip address 192.168.12.2 255.255.255.0
+R2(config-if)# description ## to R1 ##
+R2(config-if)# no shutdown
+R2(config-if)# int g0/1
+R2(config-if)# ip address 192.168.13.2 255.255.255.0
+R2(config-if)# description ## to R3 ##
+R2(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img5.png" width="600" >
+
+Configured two static routes:
+- 192.168.1.0/24 with an exit interface of G0/0
+- 192.168.3.0/24 with a next hop of 192.168.13.3
+```
+R2(config)# ip route 192.168.1.0 255.255.255.0 g0/0
+R2(config)# ip route 192.168.3.0 255.255.255.0 192.168.13.3
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img10.png" width="600" >
+
+Verified both routes in the routing table.
+```
+R2(config)# do show ip route
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img11.png" width="600" >
+
+### R3
+Set the hostname, then configured the IP address and description on G0/0 and G0/1 and activated them.
+```
+Router(config)# hostname R3
+R3(config)# int g0/0
+R3(config-if)# ip address 192.168.13.3 255.255.255.0
+R3(config-if)# description ## to R2 ##
+R3(config-if)# no shutdown
+R3(config-if)# int g0/1
+R3(config-if)# ip address 192.168.3.254 255.255.255.0
+R3(config-if)# description ## to SW2 ##
+R3(config-if)# no shutdown
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img6.png" width="600" >
+
+Configured a static route to 192.168.1.0/24 with a next hop of 192.168.13.2, then verified it in the routing table.
+```
+R3(config)# ip route 192.168.1.0 255.255.255.0 192.168.13.2
+R3(config)# do show ip route
+```
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img12.png" width="600" >
+
+### Test Ping
+Pinged PC2 (192.168.3.1) from PC1. All 4 packets succeeded with 0% loss.
+
+<img src="../Jeremy's IT Labs/images/Day11(L1)-img13.png" width="600" >
 
 # Day 11 - Lab 2
 
