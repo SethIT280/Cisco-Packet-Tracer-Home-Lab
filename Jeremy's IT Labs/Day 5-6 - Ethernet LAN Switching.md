@@ -1,7 +1,5 @@
 # Day 5-6 - Ethernet LAN Switching
 
-# Day 6 - ARP, ICMP, and the Switch MAC Address Table
-
 ## Task
 - Analyze the messages sent over the network when a device is pinged
 - Analyze the MAC address table on a switch
