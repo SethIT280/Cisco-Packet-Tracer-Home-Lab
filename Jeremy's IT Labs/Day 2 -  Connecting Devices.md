@@ -28,3 +28,9 @@ Connect each device using the appropriate type of cable.
 - Single-mode vs. multimode fiber
   - Single-mode: smaller core, longer range, more expensive
   - Multimode: wider core, shorter range, less expensive
+_____
+
+[Previous: Day 1 - Packet Tracer Introduction](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%201%20-%20Packet%20Tracer%20Introduction.md)
+<br>
+<br>
+[Next: Day 3 - OSI Model](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%203%20-%20OSI%20Model.md)
