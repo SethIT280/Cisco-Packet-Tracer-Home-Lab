@@ -73,4 +73,11 @@ Configure basic device security using the Cisco IOS CLI.
 - `enable password` stores the password in plaintext.
 - `service password-encryption` uses **type 7** encryption (weak and easily reversible).
 - `enable secret` uses **type 5** (MD5) hashing, which is stronger.
--  , `enable secret` takes priority even if `service password-encryption` has been set.
+- `enable secret` takes priority even if `service password-encryption` has been set.
+
+_____
+
+[Previous: Day 3 - OSI Model](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%203%20-%20OSI%20Model.md)
+<br>
+<br>
+[Next: Day 5-6 - Ethernet LAN Switching](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%205-6%20-%20Ethernet%20LAN%20Switching.md)
