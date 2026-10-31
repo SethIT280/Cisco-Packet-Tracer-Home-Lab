@@ -222,3 +222,10 @@ Pinged PC3 (192.168.3.1) from PC1 to confirm the fixes worked.
   ```
   R1(config)# ip route 0.0.0.0 0.0.0.0 <next-hop-ip>
   ```
+
+  _____
+
+[Previous: Day 10 - IPv4 Header](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%2010%20-%20IPv4%20Header.md)
+<br>
+<br>
+<!--[Next: ]()
