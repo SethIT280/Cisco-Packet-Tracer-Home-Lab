@@ -116,3 +116,10 @@ SW2# show mac address-table
   - Reply: unicast response with the MAC address
 - View the ARP table on Cisco devices: `show ip arp`
 - View the ARP table on end-user devices: `arp -a`
+
+_____
+
+[Previous: Day 4 - Intro to the CLI](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%204%20-%20Intro%20to%20the%20CLI.md)
+<br>
+<br>
+[Next: Day 7-8 - IPv4 Addressing](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%207-8%20-%20IPv4%20Addressing.md.md)
