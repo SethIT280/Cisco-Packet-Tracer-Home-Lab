@@ -96,3 +96,10 @@
 - Examples: Timestamp and Record Route
 - Minimum length: 0 bits
 - Maximum length: 320 bits
+
+_____
+
+[Previous: Day 9 - Switch Interfaces](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%209%20-%20Switch%20Interfaces.md)
+<br>
+<br>
+[Next: Day 11 - Routing Fundamentals](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%2011%20-%20Routing%20Fundamentals.md)
