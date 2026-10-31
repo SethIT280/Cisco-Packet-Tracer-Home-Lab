@@ -155,3 +155,10 @@ View with the `show interfaces` command.
 | Frame | A frame has an incorrect format |
 | Input errors | Total of all input errors (runts, giants, CRC, frame, and others) |
 | Output errors | The switch fails to send a frame because of an error |
+
+_____
+
+[Previous: Day 7-8 - IPv4 Addressing](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%207-8%20-%20IPv4%20Addressing.md.md)
+<br>
+<br>
+[Next: Day 10 - IPv4 Header](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%2010%20-%20IPv4%20Header.md)
