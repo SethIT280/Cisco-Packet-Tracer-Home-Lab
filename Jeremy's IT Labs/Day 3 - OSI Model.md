@@ -1,10 +1,43 @@
 # Day 3 - OSI Model
 
-## Task
-Analyze traffic being sent throughout the network.
+### Task
+Use Packet Tracer's simulation mode to analyze the traffic being sent throughout the network.
 
-## What I Did
+<img src="../Jeremy's IT Labs/images/day3-img1.png" width="600" >
 
+### What I Did
+
+1. **Let network traffic propagate.** In simulation mode, I let the network run and watched the event list fill with traffic.
+
+   <img src="../Jeremy's IT Labs/images/day3-img5.png" width="600" >
+
+2. **Analyzed STP**
+   - STP is a Layer 2 protocol, so it BPDU(Bridge Protocol Data Unit) encapsulated in an Ethernet frame.
+   - On SW1, the STP BPDU came in on `GigabitEthernet0/1` from SW2. SW1 then sent it out of `FastEthernet0/1` and `GigabitEthernet0/2`.
+
+   <img src="../Jeremy's IT Labs/images/day3-img2.png" width="600" >
+
+   <img src="../Jeremy's IT Labs/images/day3-img3.png" width="600" >
+
+3. **Analyzed OSPF**
+   - OSPF is a routing protocol, so its traffic includes Layer 3 information. Routers are Layer 3 devices that communicate using IP.
+   - R2 multicast an OSPF Hello packet to `224.0.0.5` out of `GigabitEthernet0/0`.
+
+   <img src="../Jeremy's IT Labs/images/day3-img4.png" width="600" >
+
+4. **Ran `ipconfig /release` and `ipconfig /renew` on PC1** to generate Layer 7 traffic with a DHCP message.
+
+   <img src="../Jeremy's IT Labs/images/day3-img6.png" width="600" >
+
+   <img src="../Jeremy's IT Labs/images/day3-img7.png" width="600" >
+
+   - At Layer 7, a DHCP Discover packet is created. Packet Tracer uses the TCP/IP model, so Layers 5 and 6 are combined with Layer 7.
+
+     <img src="../Jeremy's IT Labs/images/day3-img9.png" width="600" >
+
+   - At Layer 4, the PDU is encapsulated into a UDP segment, which is used to deliver data quickly. The client uses source port 68 and the server uses destination port 67.
+
+     <img src="../Jeremy's IT Labs/images/day3-img8.png" width="600" >
 ## What I Learned
 
 ### OSI / TCP/IP Model
