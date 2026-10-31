@@ -123,3 +123,10 @@ The 2 subtracted are the network address and the broadcast address.
   - **Status** = Layer 1 status
   - **Protocol** = Layer 2 status
 - Router interfaces are administratively down/down by default until you enter `no shutdown`.
+
+_____
+
+[Previous: Day 5-6 - Ethernet LAN Switching](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%205-6%20-%20Ethernet%20LAN%20Switching.md)
+<br>
+<br>
+[Next: Day 9 - Switch Interfaces](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%209%20-%20Switch%20Interfaces.md)
