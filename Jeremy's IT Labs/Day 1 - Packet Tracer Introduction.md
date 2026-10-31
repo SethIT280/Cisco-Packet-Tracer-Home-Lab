@@ -12,3 +12,7 @@
 - Different network devices: routers, switches, firewalls, and endpoints
 - The difference between clients and servers
   - Clients are nodes that request resources, and servers are nodes that provide them
+
+_____
+
+**[Next: Day 2 - Connecting Devices](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%202%20-%20%20Connecting%20Devices.md)**
