@@ -101,3 +101,9 @@ L3 Header | L4 Header | Data
 L4 Header | Data
 Data
 ```
+_____
+
+[Previous: Day 2 - Connecting Devices](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%202%20-%20%20Connecting%20Devices.md)
+<br>
+<br>
+[Next: Day 4 - Intro to the CLI](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%204%20-%20Intro%20to%20the%20CLI.md)
