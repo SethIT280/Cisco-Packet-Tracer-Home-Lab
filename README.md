@@ -10,3 +10,5 @@ This is my Cisco Packet Tracer home lab. I use this repo to document what I'm le
 ## Tools
 - Cisco Packet Tracer
 - Jeremy's IT Lab CCNA v1.1 (200-301) course
+
+## [Day 1 - Packet Tracer Introduction](https://github.com/SethIT280/Cisco-Packet-Tracer-Home-Lab/blob/main/Jeremy's%20IT%20Labs/Day%201%20-%20Packet%20Tracer%20Introduction.md)
